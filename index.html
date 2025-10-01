@@ -1,1 +1,149 @@
-   cd /path/to/your/project/folder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifeline Air Command - Medical Drone Control System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1 class="app-title">🚁 Lifeline Air Command</h1>
+            <div class="system-status">
+                <div class="status-indicator">
+                    <span class="status-dot status-active"></span>
+                    <span>Drone Fleet: OPERATIONAL</span>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot status-active"></span>
+                    <span>Mission Control: ACTIVE</span>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot status-active"></span>
+                    <span>Emergency Response: READY</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Application Container -->
+    <main class="app-container">
+        <!-- Mission Control Panel -->
+        <section class="mission-control">
+            <h2>Mission Control Center</h2>
+            <div class="control-panel">
+                <div class="mission-selector">
+                    <h3>Select Mission Scenario</h3>
+                    <div id="mission-list" class="mission-list">
+                        <!-- Mission scenarios will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="drone-controls">
+                    <h3>Drone Controls</h3>
+                    <div class="control-buttons">
+                        <button id="launch-btn" class="btn btn-primary">Launch Mission</button>
+                        <button id="abort-btn" class="btn btn-danger">Abort Mission</button>
+                        <button id="emergency-btn" class="btn btn-warning">Emergency Landing</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real-time Monitoring -->
+        <section class="monitoring-panel">
+            <h2>Real-time Monitoring</h2>
+            <div class="monitoring-grid">
+                <div class="monitor-card">
+                    <h4>Flight Status</h4>
+                    <div id="flight-status" class="status-display">
+                        <span class="status-text">Standby</span>
+                    </div>
+                </div>
+                
+                <div class="monitor-card">
+                    <h4>Battery Level</h4>
+                    <div id="battery-level" class="battery-display">
+                        <div class="battery-bar">
+                            <div class="battery-fill" style="width: 100%"></div>
+                        </div>
+                        <span class="battery-text">100%</span>
+                    </div>
+                </div>
+                
+                <div class="monitor-card">
+                    <h4>Weather Conditions</h4>
+                    <div id="weather-info" class="weather-display">
+                        <span class="weather-icon">☀️</span>
+                        <span class="weather-text">Clear</span>
+                    </div>
+                </div>
+                
+                <div class="monitor-card">
+                    <h4>Mission Progress</h4>
+                    <div id="mission-progress" class="progress-display">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map and Telemetry -->
+        <section class="map-telemetry">
+            <div class="map-container">
+                <h3>Flight Path & Location</h3>
+                <div id="map-display" class="map-display">
+                    <div class="map-placeholder">
+                        <p>🗺️ Interactive Map</p>
+                        <p>Real-time drone tracking will be displayed here</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="telemetry-container">
+                <h3>Telemetry Data</h3>
+                <div id="telemetry-data" class="telemetry-display">
+                    <div class="telemetry-item">
+                        <span class="label">Altitude:</span>
+                        <span class="value" id="altitude">0 m</span>
+                    </div>
+                    <div class="telemetry-item">
+                        <span class="label">Speed:</span>
+                        <span class="value" id="speed">0 km/h</span>
+                    </div>
+                    <div class="telemetry-item">
+                        <span class="label">Distance:</span>
+                        <span class="value" id="distance">0 km</span>
+                    </div>
+                    <div class="telemetry-item">
+                        <span class="label">ETA:</span>
+                        <span class="value" id="eta">--:--</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>&copy; 2025 Lifeline Air Command - Medical Drone Control System</p>
+        <p>Emergency Response Technology | Healthcare Innovation</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    <script>
+        // Initialize the drone simulator when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const simulator = new DroneSimulator();
+            simulator.initializeUI();
+        });
+    </script>
+</body>
+</html>
