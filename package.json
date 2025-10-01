@@ -1,0 +1,25 @@
+{
+  "name": "lifeline-air-command",
+  "version": "1.0.0",
+  "description": "Medical drone command and control system for emergency response operations",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": [
+    "medical-drone",
+    "emergency-response",
+    "command-control",
+    "healthcare-technology"
+  ],
+  "author": "tanyaprajapati155-collab",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
